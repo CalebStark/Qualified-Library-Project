@@ -1,8 +1,14 @@
 function findAuthorById(authors, id) {
+  // Goal is to find author with the matching ID that is provided
+  let matchingAuthor = authors.find((author) => author.id === id);
+  return matchingAuthor;
   // YOUR SOLUTION HERE
 }
 
 function findBookById(books, id) {
+  // Goal is to find the book with the matching ID that is provided
+  let matchingBook = books.find((book) => book.id === id);
+  return matchingBook;
   // YOUR SOLUTION HERE
 }
 
