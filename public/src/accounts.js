@@ -1,15 +1,22 @@
 function findAccountById(accounts, id) {
-  // YOUR SOLUTION HERE
+  // Goal is to find account with the matching ID that is provided
+  let matchingAccount = accounts.find((account) => account.id === id);
+  return matchingAccount;
   // Hint: You can use the [`find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method here. 
 }
 
 function sortAccountsByLastName(accounts) {
-  // YOUR SOLUTION HERE
+  // Goal is to sort thru the provided objects and sort them according to there last name
+  accounts.sort((accountA, accountB) => accountA.name.last < accountB.name.last ? -1 : 1);
+  return accounts;
   // Hint: You can use the [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method here. 
 }
 
 function getAccountFullNames(accounts) {
-  // YOUR SOLUTION HERE
+  // Goal is to return an array of each full name.
+  const accountList = accounts.map((account) => `${account.name.first} ${account.name.last}`);
+  return accountList;
+
   // Hint: You can use the [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method here.
 }
 
