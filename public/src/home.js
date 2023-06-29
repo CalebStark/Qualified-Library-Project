@@ -1,12 +1,19 @@
 function getTotalBooksCount(books) {
+  // Goal is to return to total books in the passed array.
+  return books.length;
   // YOUR SOLUTION HERE
 }
 
 function getTotalAccountsCount(accounts) {
+  // Goal is to return the total accound in the passed array.
+  return accounts.length;
   // YOUR SOLUTION HERE
 }
 
 function getBooksBorrowedCount(books) {
+  // Goal is to return the total books that are checked out.
+  let totalBooks = books.filter((book) => book.borrows[0].returned === false)
+  return totalBooks.length;
   // YOUR SOLUTION HERE
   // Hint: You can use the [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method here. 
   // If you get stuck, feel free to take a look at this repl.it: https://replit.com/@thinkful/getBooksBorrowedCount#index.js
